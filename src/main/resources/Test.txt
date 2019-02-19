@@ -1,6 +1,1 @@
-<<<<<<< HEAD
 This is demo file
-This is another comment.
-=======
-This is demo file
->>>>>>> 87efdf2c8c7b76afa4c27a5aecacc60fe4822a8f
