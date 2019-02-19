@@ -1,9 +1,9 @@
 package com.vivek.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 @RequestMapping("/api/myApp")
 public class WelcomeController {
 	
