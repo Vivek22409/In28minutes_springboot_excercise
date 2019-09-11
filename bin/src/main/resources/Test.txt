@@ -1,0 +1,7 @@
+This is demo file
+This line i have added in repo for resolving merge conflict.
+This is second line I have added just now.:
+Added
+Changed
+ABCD
+XYZ
