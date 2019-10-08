@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.vivek.exception.UserNotFoundException;
 import com.vivek.model.User;
 import com.vivek.service.UserService;
 
@@ -29,13 +30,16 @@ public class HomeController {
 	@GetMapping("/api/users/{id}")
 	public User getUser(@PathVariable String id) {
 		int identity = Integer.parseInt(id);
+		User usr = usrService.getUser(identity);
+		if(usr==null)
+			throw new UserNotFoundException("id-"+id);
 		return usrService.getUser(identity);		
 	}
 	
 	@GetMapping("/api/users")
-	public List<User> getUser() {
+	public List<User> getUsers() {
 		return usrService.getUserList();		
-	}
+	} 
 	
 	@PostMapping("/api/user")
 	public ResponseEntity<Object> saveUser(@RequestBody User usr) {
