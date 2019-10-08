@@ -5,6 +5,4 @@ Added
 Changed
 ABCD
 XYZ
-Demo
-
-Test
+DemoTest

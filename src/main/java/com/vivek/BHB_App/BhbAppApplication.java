@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.vivek.controller"} )
+@ComponentScan(basePackages = {"com.vivek.controller","com.vivek.service","com.vivek.dao","com.vivek.daoImpl"} )
 public class BhbAppApplication {
 
 	public static void main(String[] args) {
