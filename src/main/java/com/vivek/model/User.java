@@ -1,8 +1,20 @@
 package com.vivek.model;
 
-public class User {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.validation.constraints.Size;
 
+import io.swagger.annotations.ApiModel;
+
+@Entity
+@ApiModel(description="All details about the user")
+public class User {
+	
+	@Id
+	@GeneratedValue 
 	private int id;	
+	@Size(min=2, message="Name should have atleast two charcters")
 	private String name;
 	private String emailId;
 	

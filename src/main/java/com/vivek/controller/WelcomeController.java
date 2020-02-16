@@ -11,5 +11,4 @@ public class WelcomeController {
 	public String displayGreetMessage() {
 		return "Welcome to Spring boot App";
 	}
-
 }

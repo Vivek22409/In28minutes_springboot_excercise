@@ -1,8 +1,8 @@
 package com.vivek.daoImpl;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
-
 import org.springframework.stereotype.Repository;
 
 import com.vivek.dao.UserRepository;
@@ -48,14 +48,16 @@ public class UserRepositoryImpl implements UserRepository{
 	}
 
 	@Override
-	public String deleteUser(int id) {
-		for(User user:usrLst) {
+	public User deleteUser(int id) {
+		Iterator<User> iterator = usrLst.iterator();
+		while(iterator.hasNext()) {
+			User user = iterator.next();
 			if(user.getId()==id) {
-				usrLst.remove(user);
-			}
-				
+				iterator.remove();
+				return user;
+			}				
 		}
-		return "Success";
+		return null;
 	}
 
 	@Override

@@ -9,7 +9,7 @@ public interface UserRepository {
 	public String addUser(User usr); 
 	public String updateUser(User usr);
 	public User getUser(int id);
-	public String deleteUser(int id);	
+	public User deleteUser(int id);	
 	public List<User> getUserList();	
 
 }
